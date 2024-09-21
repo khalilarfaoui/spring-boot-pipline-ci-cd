@@ -55,6 +55,18 @@ jobs:
       - name: Run Tests
         run: mvn test
 
+      # Start the application
+      - name: Run Spring Boot App
+        run: |
+          nohup mvn spring-boot:run &
+          sleep 60
+
+      # Test API with cURL
+      - name: Test API with cURL
+        run: |
+          # Tester une requête GET
+          curl --fail http://localhost:8085/api/employees/test/workflow || exit 1
+
 
       # Login DockerHub
       - name: Login to DockerHub

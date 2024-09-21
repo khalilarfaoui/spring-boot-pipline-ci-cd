@@ -21,6 +21,12 @@ public class EmployeeController {
         return employeeService.getAllEmployees();
     }
 
+
+    @GetMapping("test/workflow")
+    public String testEmployees() {
+        return "Employee API Ready !";
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
         Optional<Employee> employee = employeeService.getEmployeeById(id);
