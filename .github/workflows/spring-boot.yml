@@ -65,7 +65,7 @@ jobs:
       - name: Test API with cURL
         run: |
           # Tester une requête GET
-          curl --fail http://localhost:8080/api/employees/test/workflow || exit 1
+          curl --fail http://localhost:8085/api/employees/test/workflow || exit 1
 
 
       # Login DockerHub
