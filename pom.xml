@@ -29,9 +29,7 @@
 	<properties>
 		<java.version>17</java.version>
 
-			<sonar.projectKey>${sonar.projectKey}</sonar.projectKey>
-			<sonar.organization>${sonar.organization}</sonar.organization>
-			<sonar.host.url>${sonar.host.url}</sonar.host.url>
+
 
 	</properties>
 	<dependencies>
