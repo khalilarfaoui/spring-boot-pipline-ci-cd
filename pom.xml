@@ -29,7 +29,9 @@
 	<properties>
 		<java.version>17</java.version>
 
-
+		<sonar.projectKey>khalilarfaoui_spring-boot-pipline-ci-cd</sonar.projectKey>
+		<sonar.organization>khalilarfaoui</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
 	</properties>
 	<dependencies>
