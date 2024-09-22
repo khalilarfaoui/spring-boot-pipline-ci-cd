@@ -28,6 +28,11 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+
+			<sonar.projectKey>${sonar.projectKey}</sonar.projectKey>
+			<sonar.organization>${sonar.organization}</sonar.organization>
+			<sonar.host.url>${sonar.host.url}</sonar.host.url>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -85,6 +90,23 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>load-properties</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>parse-version</goal>
+						</goals>
+						<configuration>
+							<propertiesFile>src/main/resources/application.properties</propertiesFile>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>
